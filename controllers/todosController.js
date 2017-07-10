@@ -3,7 +3,6 @@ const todosService = require('./../services').todosService;
 
 let todosController = {
   createTodo: (req, res, err) => {
-    console.log(req.body);
     todosService.createTodo(req.body)
     .then(function(data) {
       return dataHelper.successCallBack(data);
@@ -43,7 +42,6 @@ let todosController = {
   },
 
   updateTodo: (req, res, err) => {
-    console.log(req.params.id);
     todosService.updateTodo(req.params.id, req.body)
     .then(function(data) {
       return dataHelper.successCallBack(data);

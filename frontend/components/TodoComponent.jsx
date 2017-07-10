@@ -52,7 +52,6 @@ class TodoComponent extends Component {
 
   saveEditingText(e) {
     e.preventDefault();
-    console.log(this.state.text.trim(), 'trim');
     if (this.state.text.trim() !== '') {
       this.props.editTodo(this.props.id, this.state.text);
       this.setState({editing: false});
@@ -77,7 +76,6 @@ class TodoComponent extends Component {
   }
 
   render() {
-    console.log(this.props, 'Todo props');
     return (
       <li className="list-group-item" key={this.props.id}>
         <form onSubmit={this.saveEditingText}>

@@ -35,17 +35,6 @@ models.sequelize
   });
 
 
-// var models = require('./server/models/');
-// models.sequelize
-//   .authenticate()
-//   .then(function () {
-//     console.log('Connection successful');
-//   })
-//   .catch(function(error) {
-//     console.log("Error creating connection:", error);
-//   });
-  
-
 app.get('/*', require('./api/get'));
 app.post('/*', require('./api/post'));
 app.put('/*', require('./api/put'));

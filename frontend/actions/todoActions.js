@@ -51,7 +51,6 @@ export const addTodo = (text) => {
       }
     })
     .then((response) => {
-      console.log(response);
       clientDataHelper(response, () => {
         dispatch({
           type: ADD_TODO,
